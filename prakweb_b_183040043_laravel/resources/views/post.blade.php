@@ -9,5 +9,5 @@
     <p>{{ $post["body"] }}</p>
 </article>
 
-<a href="/blog">Back</a>
+<a href="/blog" class="badge rounded-pill bg-primary">Back</a>
 @endsection
