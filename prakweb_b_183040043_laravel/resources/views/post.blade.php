@@ -4,10 +4,9 @@
 @section('container')
 
 <article>
-    <h2>{{ $post["title"] }}</h2>
-    <h5>{{ $post["author"] }}</h5>
-    <p>{{ $post["body"] }}</p>
+    <h2 class="mb-5">{{ $post->title }}</h2>
+    {!! $post->body !!}
 </article>
 
-<a href="/blog" class="badge rounded-pill bg-primary">Back</a>
+<a href="/blog" class="badge rounded-pill bg-primary">Back To Post</a>
 @endsection
