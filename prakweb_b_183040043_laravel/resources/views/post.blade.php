@@ -5,9 +5,10 @@
 
 <article>
     <h2 class="mb-5">{{ $post->title }}</h2>
-    <p>By. Elang Gilang in <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
+    <p>By. <a href="#" class="text-decoration-none">{{ $post->user->name }} </a>in
+    <a href="/categories/{{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
     {!! $post->body !!}
 </article>
 
-<a href="/blog" class="badge rounded-pill bg-primary">Back To Post</a>
+<a href="/blog" class="d-block mt-3">Back To Post</a>
 @endsection
