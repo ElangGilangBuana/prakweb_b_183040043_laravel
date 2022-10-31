@@ -22,7 +22,8 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('home', [
-        "title" => "Home"
+        "title" => "Home",
+        'active' => 'home'
 
     ]);
 });
@@ -32,11 +33,12 @@ Route::get('/about', function () {
         "title" => "About",
         "name" => "Elang Gilang Buana",
         "email" => "buana.183040043@mail.unpas.ac.id",
-        "image" => "el.jpg"
+        "image" => "el.jpg",
+        'active' => 'about'
     ]);
 });
 
-Route::get('/blog', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/categories', function () {
@@ -44,22 +46,5 @@ Route::get('/categories', function () {
         'title' => 'Post Categories',
         "active" => "category",
         'categories' => Category::all(),
-    ]);
-});
-
-
-Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('posts', [
-        'title' => "Post by Category : $category->name",
-        "active" => "category",
-        'posts' => $category->posts->load('category', 'author'),
-
-    ]);
-});
-
-Route::get('/authors/{author:username}', function (User $author) {
-    return view('posts', [
-        'title' => "Post by Author : $author->name",
-        'posts' => $author->posts->load('category', 'author'),
     ]);
 });
