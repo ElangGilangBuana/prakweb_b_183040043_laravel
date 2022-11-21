@@ -17,7 +17,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(3)->create();
 
         // User::create([
         //     'name' => 'Elang Gilang Buana',
@@ -29,6 +28,8 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'adut@gmail.com',
         //     'password' => bcrypt('54321')
         // ]);
+
+        User::factory(3)->create();
 
         Category::create([
             'name' => 'Web Programming',

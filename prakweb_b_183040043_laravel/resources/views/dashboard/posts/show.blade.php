@@ -5,7 +5,7 @@
     <div class="row my-3">
         <div class="col-lg-8">
             <h2 class="mb-3">{{ $post->title }}</h2>
-            
+
                 <a href="/dashboard/posts" class="btn btn-success"><span data-feather="arrow-left" class="align-text-bottom"></span> Back to all my posts</a>
                 <a href="" class="btn btn-warning"><span data-feather="edit" class="align-text-bottom"></span> Edit</a>
                 <a href="" class="btn btn-danger"><span data-feather="x-circle" class="align-text-bottom"></span> Delete</a>
@@ -15,7 +15,7 @@
                     {!! $post->body !!}
                 </article>
             
-            <a href="/posts" class="d-block mt-3">Back To Post</a>
+            <a href="/dashboard/posts" class="d-block mt-3">Back To Post</a>
         </div>
     </div>
 </div>
